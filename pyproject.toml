@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "desafio-eng-de-dados-prouni"
+version = "0.1.0"
+description = "\"Desafio: Engenharia de Dados\""
+authors = ["janascher <janainascher@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "desafio_eng_de_dados_prouni"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
