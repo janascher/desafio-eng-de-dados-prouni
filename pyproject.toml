@@ -9,6 +9,7 @@ packages = [{include = "desafio_eng_de_dados_prouni"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pandas = "^2.0.2"
 
 
 [build-system]
