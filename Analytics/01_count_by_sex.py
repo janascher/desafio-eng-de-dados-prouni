@@ -7,7 +7,7 @@ from Scripts.data_loader import load_data
 
 df_prouni = load_data()
 
-# Contagem de beneficiários por sexo
+# Quantidade de beneficiários por sexo
 count_sex = df_prouni['SEXO_BENEFICIARIO'].value_counts()
 
 # Gráfico de contagem de beneficiários por sexo

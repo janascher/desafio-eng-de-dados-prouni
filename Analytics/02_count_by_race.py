@@ -7,7 +7,7 @@ from Scripts.data_loader import load_data
 
 df_prouni = load_data()
 
-# Contagem de beneficiários por raça/cor
+# Quantidade de beneficiários por raça/cor
 count_race = df_prouni['RACA_BENEFICIARIO'].value_counts()
 
 # Gráfico de barras da contagem de beneficiários por raça/cor
