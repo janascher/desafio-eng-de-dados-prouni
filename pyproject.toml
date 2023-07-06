@@ -11,6 +11,8 @@ packages = [{include = "desafio_eng_de_dados_prouni"}]
 python = "^3.10"
 pandas = "^2.0.2"
 plotly = "^5.15.0"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.6"
 
 
 [build-system]
