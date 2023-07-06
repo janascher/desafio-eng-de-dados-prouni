@@ -4,6 +4,7 @@ import plotly.express as px
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from Scripts.data_loader import load_data
+# from Scripts.script_queries 
 
 df_prouni = load_data()
 
