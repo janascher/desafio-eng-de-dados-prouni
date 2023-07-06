@@ -8,27 +8,21 @@ from Scripts.data_loader import load_data
 
 df_prouni = load_data()
 
-#TODO GUSTAVO
 # Converta a coluna 'DATA_NASCIMENTO' em um formato datetime para executar cálculos com base em datas 
 df_prouni['DATA_NASCIMENTO'] = pd.to_datetime(df_prouni['DATA_NASCIMENTO'], format='%d/%m/%Y')
 
-#TODO GUSTAVO
 # Calcula a idade de cada beneficiário com base na sua data de nascimento, ou seja, subtrai a coluna 'DATA_NASCIMENTO' da data atual e divide o resultado pelo número de dias em um ano para obter a idade em anos.
 df_prouni['IDADE'] = (pd.Timestamp('now') - df_prouni['DATA_NASCIMENTO']) / pd.Timedelta(days=365.25)
 
-#TODO GUSTAVO
 # Média de idade dos beneficiários por sexo e raça/cor
 average_age = df_prouni.groupby(['SEXO_BENEFICIARIO', 'RACA_BENEFICIARIO'])['IDADE'].mean().reset_index()
 
-#TODO GUSTAVO
 # Renomear a coluna 'IDADE' para 'Média de Idade'
 average_age = average_age.rename(columns={'IDADE': 'MEDIA_DE_IDADE'})
 
-#TODO GUSTAVO
 # Arredonda o valor da média de idade para duas casas decimais
 average_age['MEDIA_DE_IDADE'] = average_age['MEDIA_DE_IDADE'].apply(lambda x: round(x, 2))
 
-#TODO GUSTAVO
 # Adiciona o símbolo '%' ao final do valor formatado
 average_age['MEDIA_DE_IDADE'] = average_age['MEDIA_DE_IDADE'].astype(str) + '%'
 
